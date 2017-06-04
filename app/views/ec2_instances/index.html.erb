@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ec2 Instances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>AWS ID</th>
+      <th>Instance type</th>
+      <th>Instance ami</th>
+      <th>Region</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ec2_instances.each do |ec2_instance| %>
+      <tr>
+        <td><%= ec2_instance.name %></td>
+        <td><%= ec2_instance.aws_id %></td>
+        <td><%= ec2_instance.instance_type %></td>
+        <td><%= ec2_instance.instance_ami %></td>
+        <td><%= ec2_instance.region %></td>
+        <td><%= link_to 'Show', ec2_instance %></td>
+        <!-- <td><%= link_to 'Edit', edit_ec2_instance_path(ec2_instance) %></td> -->
+        <td><%= link_to 'Destroy', ec2_instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ec2 Instance', new_ec2_instance_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  aws_id: MyString
+  instance_type: MyString
+  instance_ami: MyString
+  region: MyString
+
+two:
+  name: MyString
+  aws_id: MyString
+  instance_type: MyString
+  instance_ami: MyString
+  region: MyString
